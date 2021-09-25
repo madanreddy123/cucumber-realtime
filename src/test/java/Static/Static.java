@@ -1,4 +1,4 @@
-package pages;
+package Static;
 
 import java.util.List;
 
@@ -7,15 +7,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Static 
+import TestBase.TestBase;
+
+
+
+public class Static extends TestBase
 {
-
-    WebDriver driver;
-
-	public Static(WebDriver driver) {
-		this.driver = driver;
-	}
-
 
 	By Primary_School = By.xpath("//input[@placeholder='Primary School Name']");
 	By Secondary_School = By.xpath("//input[@placeholder='Secondary School Name']");
@@ -29,11 +26,22 @@ public class Static
 
 		//Parameterizing the void functions
 
+	public Static(WebDriver driver) 
+	
+	{
+		this.driver = driver;
+	}
+
 	public void Primary_School(String university) 
 
 	{
 		driver.findElement(Primary_School).sendKeys(university);
 	}
+	
+	public boolean Primary_School() {
+		return driver.findElement(Primary_School).isDisplayed();
+	}
+
 
 	public  void Secondary_School(String university) throws InterruptedException
 
@@ -86,4 +94,3 @@ public class Static
 		}
 	
 }
-

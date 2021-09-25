@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="56.251048">
+<testcase classname="education form" name="enter the education form" time="14.973394">
+<system-out><![CDATA[Given I enter the name a Primary_School "model mission high school".........passed
+And I enter the name a Secondary_School "model mission high school".........passed
+And I enter the name a Intermediate "sri chaitanya".........................passed
+When I enter the name a Engineering "pulla reddy engineering college".......passed
+When I enter the name a University "<university>"...........................passed
+When I enter the intermediate_Percentage "Intermediate Percentage"..........passed
+When I click on gender......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="education form" name="enter the education form 2" time="12.795968">
+<system-out><![CDATA[Given I enter the name a Primary_School "model mission high school".........passed
+And I enter the name a Secondary_School "model mission high school".........passed
+And I enter the name a Intermediate "sri chaitanya".........................passed
+When I enter the name a Engineering "pulla reddy engineering college".......passed
+When I enter the name a University "<university>"...........................passed
+When I enter the intermediate_Percentage "Intermediate Percentage"..........passed
+When I click on gender......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="education form" name="enter the education form 3" time="14.865983">
+<system-out><![CDATA[Given I enter the name a Primary_School "model mission high school".........passed
+And I enter the name a Secondary_School "model mission high school".........passed
+And I enter the name a Intermediate "sri chaitanya".........................passed
+When I enter the name a Engineering "pulla reddy engineering college".......passed
+When I enter the name a University "<university>"...........................passed
+When I enter the intermediate_Percentage "Intermediate Percentage"..........passed
+When I click on gender......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="education form" name="enter the education form 4" time="13.615703">
+<system-out><![CDATA[Given I enter the name a Primary_School "model mission high school".........passed
+And I enter the name a Secondary_School "model mission high school".........passed
+And I enter the name a Intermediate "sri chaitanya".........................passed
+When I enter the name a Engineering "pulla reddy engineering college".......passed
+When I enter the name a University "<university>"...........................passed
+When I enter the intermediate_Percentage "Intermediate Percentage"..........passed
+When I click on gender......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
