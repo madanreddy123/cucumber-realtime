@@ -14,6 +14,7 @@ import TestBase.TestBase;
 public class Static extends TestBase
 {
 
+	WebDriver driver;
 	By Primary_School = By.xpath("//input[@placeholder='Primary School Name']");
 	By Secondary_School = By.xpath("//input[@placeholder='Secondary School Name']");
 	By Intermediate = By.xpath("//input[@placeholder='Intermediate College Name']");

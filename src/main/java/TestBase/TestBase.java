@@ -40,9 +40,15 @@ public class TestBase {
        String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
+			
+			System.setProperty("webdriver.chrome.driver", "/Users/madanmohanreddy/Desktop/gitrepository/cucumberrealtime/drivers/chromedriver");
+
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
+			
+			System.setProperty("webdriver.firefox.driver", "/Users/madanmohanreddy/Desktop/gitrepository/cucumberrealtime/drivers/geckodriver");
+
 			driver = new FirefoxDriver(); 
 		}
 		driver.manage().window().maximize();

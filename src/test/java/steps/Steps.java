@@ -3,21 +3,11 @@ package steps;
 import org.junit.Assert;
 import Static.Static;
 import TestBase.TestBase;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 
 public class Steps extends TestBase
 {
-
-@Before
-	
-	public void intialisation()
-	{
-		TestBase.initialization();  
-	}
-	
-	
 
 @Given("^I enter the name a Primary_School \"([^\"]*)\"$")
 public void i_enter_the_name_a_Primary_School(String primary_School) throws Throwable 

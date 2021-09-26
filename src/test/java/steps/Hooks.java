@@ -7,11 +7,18 @@ import org.openqa.selenium.WebDriverException;
 import TestBase.TestBase;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
+import cucumber.api.java.Before;
 
 
 public class Hooks extends  TestBase
 {
 
+@Before
+	
+	public void intialisation()
+	{
+		TestBase.initialization();  
+	}
 	
 	@After(order = 2)
 	
