@@ -45,7 +45,7 @@ public class testing
 	{
 	
 		
-		waithelper.waitforelement(driver.findElement(Primary_School), 0);
+		waithelper.waitforelement(driver.findElement(Primary_School), 20);
 		
 		driver.findElement(Primary_School).sendKeys(university);
 		
