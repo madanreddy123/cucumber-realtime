@@ -1,4 +1,5 @@
-package Static;
+package pages;
+
 
 import java.util.List;
 
@@ -7,14 +8,21 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import TestBase.TestBase;
+import TestBase.Waithelper;
 
-
-
-public class Static extends TestBase
+public class testing 
 {
 
-	WebDriver driver;
+    WebDriver driver;
+    Waithelper waithelper;
+   
+
+	public testing(WebDriver driver) {
+		this.driver = driver;
+		waithelper = new Waithelper(driver);	
+	}
+
+
 	By Primary_School = By.xpath("//input[@placeholder='Primary School Name']");
 	By Secondary_School = By.xpath("//input[@placeholder='Secondary School Name']");
 	By Intermediate = By.xpath("//input[@placeholder='Intermediate College Name']");
@@ -25,31 +33,40 @@ public class Static extends TestBase
 
 	
 
-		//Parameterizing the void functions
-
-	public Static(WebDriver driver) 
-	
+	public String gettile()
 	{
-		this.driver = driver;
+		return driver.getTitle();
+		
 	}
+	
 
 	public void Primary_School(String university) 
 
 	{
-		driver.findElement(Primary_School).sendKeys(university);
-	}
 	
-	public boolean Primary_School() {
+		
+		waithelper.waitforelement(driver.findElement(Primary_School), 0);
+		
+		driver.findElement(Primary_School).sendKeys(university);
+		
+	}
+	public boolean Primary_School() 
+
+	{
 		return driver.findElement(Primary_School).isDisplayed();
 	}
-
-
 	public  void Secondary_School(String university) throws InterruptedException
 
 	{
 		  List<WebElement> ld =  driver.findElements(Secondary_School);
 
 		  ld.get(0).sendKeys(university);
+	}
+	
+	public boolean Secondary_School() 
+
+	{
+		return driver.findElement(Secondary_School).isDisplayed();
 	}
 
 	public  void Intermediate(String university)
@@ -60,19 +77,39 @@ public class Static extends TestBase
 		ls.sendKeys(university);
 		
 	}
+	
+	public boolean Intermediate() 
+
+	{
+		return driver.findElement(Intermediate).isDisplayed();
+	}
+
 		public  void Engineering(String university) throws InterruptedException
 		{
 			
 			driver.findElement(Engineering).sendKeys(university);
 			   
 			    }
+		public boolean Engineering() 
+
+		{
+			return driver.findElement(Engineering).isDisplayed();
+		}
+		
+		
 		public  void University(String university) throws InterruptedException
 
 		{
 			driver.findElement(University).sendKeys(university);
 
 			
-		}			
+		}	
+		
+		public boolean University() 
+
+		{
+			return driver.findElement(University).isDisplayed();
+		}
     			
 		public  void Intermediate_Percentage(String university) throws InterruptedException
 
@@ -80,7 +117,6 @@ public class Static extends TestBase
 			driver.findElement(Intermediate_Percentage).click();
 			driver.findElement(Intermediate_Percentage).sendKeys(university);
 			driver.findElement(Intermediate_Percentage).sendKeys(Keys.ENTER);
-			Thread.sleep(4000);
 
 			
 		}
@@ -95,3 +131,4 @@ public class Static extends TestBase
 		}
 	
 }
+
